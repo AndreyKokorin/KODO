@@ -1,0 +1,782 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: Andantinoscript;
+  src: url(../fonts/andantinoscript.ttf);
+}
+@font-face {
+  font-family: Exo2;
+  src: url(../fonts/Exo2-Light.ttf);
+}
+@font-face {
+  font-family: Geometria-regular;
+  src: url(../fonts//Geometria-Regular.ttf);
+}
+@font-face {
+  font-family: Intro;
+  src: url(../fonts/intro_regular.ttf);
+}
+@font-face {
+  font-family: Mulish;
+  src: url(../fonts/Mulish-Bold.ttf);
+}
+@font-face {
+  font-family: andantinoscript;
+  src: url(../fonts/andantinoscript.ttf);
+}
+@font-face {
+  font-family: Geometria;
+  src: url(../fonts/ofont.ru_Geometria.ttf);
+}
+@font-face {
+  font-family: Liana;
+  src: url(../fonts/ofont.ru_Liana.ttf);
+}
+@font-face {
+  font-family: Roboro;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #FFFFFF;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+span {
+  color: #E4200E;
+}
+
+.start {
+  height: 100vh;
+}
+
+.wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 1180px) {
+  .wrapper {
+    width: 82%;
+  }
+}
+
+.header {
+  background: #000000;
+  position: fixed;
+  width: 100%;
+  opacity: 0.1;
+  top: 0;
+  opacity: 1;
+  z-index: 99;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background: transparent;
+    opacity: 0.7;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.header_logo {
+  padding: 17px 0 15px 0;
+  text-align: center;
+}
+.header_logo .logo {
+  width: 106px;
+  height: 51px;
+  background: url(../img/start_logo_02\ 2.png);
+  background-size: cover;
+}
+.header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .header_menu {
+    display: none;
+  }
+}
+.header_menu ul {
+  margin: 0 0 14px 0;
+  padding: 0;
+}
+.header_menu li {
+  display: inline-block;
+  font-family: Geometria-regular;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.header_menu li:hover {
+  color: #E4200E;
+}
+.header_menu__list .line2, .header_menu__list .line4 {
+  padding: 0 30px;
+}
+.header_menu__list .line6 {
+  padding-left: 30px;
+}
+.header__burger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__burger {
+    display: block;
+  }
+}
+.header__burger div {
+  width: 32px;
+  height: 2px;
+  background-color: #FFFFFF;
+}
+.header__burger .line2 {
+  margin: 8px 0;
+}
+
+.discount {
+  background: #000000;
+  position: relative;
+  margin-top: 120px;
+}
+.discount_title {
+  font-family: Geometria;
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding-top: 170px;
+}
+.discount_title span {
+  color: #E4200E;
+}
+.discount_links {
+  padding: 50px 0;
+}
+.discount_links__1 {
+  margin-right: 7px;
+}
+
+.carped {
+  height: 340px;
+  height: 320px;
+  margin-top: 120px;
+  background-image: url(../img/toshishito_pattern_red\ 2.png);
+}
+@media screen and (max-width: 768px) {
+  .carped {
+    margin-top: 0;
+  }
+}
+
+.sushi {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+@media screen and (max-width: 576px) {
+  .sushi {
+    top: 100px;
+  }
+}
+.sushi_wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  text-align: right;
+}
+@media (max-width: 1180px) {
+  .sushi_wrapper {
+    width: 82%;
+  }
+}
+.sushi__img {
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+@media screen and (max-width: 930px) {
+  .sushi__img img {
+    width: 80%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 670px) {
+  .sushi__img img {
+    width: 100%;
+  }
+}
+.sushi .animImg {
+  -webkit-transform: rotate(0.5turn) translateX(-28%);
+          transform: rotate(0.5turn) translateX(-28%);
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.about {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.about span {
+  color: #E4200E;
+}
+.about .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 140px 0 90px 0;
+}
+@media (max-width: 1180px) {
+  .about .wrapper {
+    width: 82%;
+  }
+}
+.about__title {
+  font-family: "Geometria";
+  font-size: 40px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .about__title {
+    font-size: 30px;
+  }
+}
+.about__howMeals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 768px) {
+  .about__howMeals {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-top: 22px;
+  }
+}
+.about__howMeals_line {
+  height: 56px;
+  width: 5px;
+  background-color: #E4200E;
+  margin-right: 18px;
+}
+.about__howMeals_text {
+  font-family: Exo2;
+  font-size: 16px;
+  font-weight: 300;
+  width: 35%;
+}
+@media (max-width: 768px) {
+  .about__howMeals_text {
+    width: 100%;
+  }
+}
+.about__advantages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  margin-top: 96px;
+}
+@media screen and (max-width: 768px) {
+  .about__advantages {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 30px 1fr 30px 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 30px;
+  }
+  .about__advantages > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .about__advantages > *:nth-child(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .about__advantages > *:nth-child(3) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+}
+.about__advantages_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.about__advantages_item .cikle {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #E4200E;
+  margin: 3px 11px 0 0;
+}
+.about__advantages_item .text {
+  width: 90%;
+  font-family: Exo2;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@-webkit-keyframes run-text {
+  from {
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+  to {
+    -webkit-transform: translateX(-45%);
+            transform: translateX(-45%);
+  }
+}
+
+@keyframes run-text {
+  from {
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+  to {
+    -webkit-transform: translateX(-45%);
+            transform: translateX(-45%);
+  }
+}
+.toshishito {
+  height: 776px;
+  background-image: url(../img/sushi-with-cucumber-ginger-wasabi-and-sesame-seeds\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .toshishito {
+    height: 523px;
+  }
+}
+@media (max-width: 576px) {
+  .toshishito {
+    height: 267px;
+  }
+}
+.toshishito .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1180px) {
+  .toshishito .wrapper {
+    width: 82%;
+  }
+}
+.toshishito img {
+  width: 431px;
+  height: 645px;
+}
+@media (max-width: 768px) {
+  .toshishito img {
+    width: 320px;
+    height: 378px;
+  }
+}
+@media (max-width: 576px) {
+  .toshishito img {
+    width: 120px;
+    height: 178px;
+  }
+}
+.toshishito__img {
+  text-align: right;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+.toshishito__text {
+  position: absolute;
+  width: 700%;
+  top: 250px;
+  left: 0;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  font-family: "Intro";
+  font-size: 350px;
+  font-weight: 400;
+  z-index: 1;
+  color: #FFFFFF;
+  -webkit-animation-name: run-text;
+          animation-name: run-text;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.aboutKitchen {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Exo2;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.aboutKitchen span {
+  color: #E4200E;
+}
+.aboutKitchen .wrapper {
+  width: 81%;
+  margin: 0 auto;
+  padding: 89px 0;
+}
+@media (max-width: 1180px) {
+  .aboutKitchen .wrapper {
+    width: 82%;
+  }
+}
+.aboutKitchen .aboutKitchen__title {
+  text-align: center;
+  font-family: Geometria;
+  font-size: 40px;
+  font-weight: 700;
+}
+.aboutKitchen__main {
+  margin-top: 91px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutKitchen__main_descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutKitchen__main_descr .aboutKitchen__main_text {
+  margin-top: 18px;
+}
+.aboutKitchen__main_line {
+  height: 141px;
+  width: 5px;
+  background-color: #E4200E;
+  margin-right: 18px;
+}
+.aboutKitchen__main_descr2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutKitchen__main_descr2 .cikle {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #E4200E;
+  margin: 4px 11px 0 0;
+}
+.aboutKitchen__main_descr2 .aboutKitchen__main_text {
+  width: 95%;
+}
+
+.downloadApp {
+  font-family: Geometria;
+  font-size: 40px;
+  font-weight: 700;
+  height: 360px;
+  color: #FFFFFF;
+  background-image: url(../img/toshishito_pattern_black5.png);
+}
+.downloadApp span {
+  color: #E4200E;
+}
+.downloadApp .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+@media (max-width: 1180px) {
+  .downloadApp .wrapper {
+    width: 82%;
+  }
+}
+.downloadApp__links {
+  margin-top: 21px;
+}
+.downloadApp__links_item {
+  display: inline-block;
+  /*  img{
+       width: 110px;
+       height: 36px; 
+   } */
+}
+.downloadApp__links_item .pd {
+  padding-left: 23px;
+}
+
+.beverages {
+  background-color: #000000;
+}
+.beverages .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0 75px 0;
+}
+@media (max-width: 1180px) {
+  .beverages .wrapper {
+    width: 82%;
+  }
+}
+.beverages__descr {
+  margin: 230px 0 0 70px;
+}
+.beverages__title {
+  font-family: Geometria;
+  font-size: 40px;
+  font-weight: 700;
+}
+.beverages__list {
+  margin-top: 44px;
+  font-family: Geometria;
+  font-size: 16px;
+  font-weight: 300;
+}
+.beverages__list ul {
+  list-style-type: none;
+}
+.beverages__list .cikle {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #E4200E;
+  margin: 5px 11px 0 0;
+}
+.beverages__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.beverages__list .text {
+  width: 95%;
+}
+.beverages__list .pd {
+  margin: 32px 0;
+}
+
+.delivery {
+  height: 776px;
+  background-image: url(../img/Kodo_T_Cars_nov_007.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.delivery .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 1180px) {
+  .delivery .wrapper {
+    width: 82%;
+  }
+}
+.delivery img {
+  width: 431px;
+  height: 645px;
+  margin-top: 57px;
+}
+.delivery__img {
+  text-align: right;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+.delivery__text {
+  position: absolute;
+  width: 700%;
+  top: 250px;
+  left: 0;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  font-family: "Intro";
+  font-size: 350px;
+  font-weight: 400;
+  z-index: 1;
+  color: #FFFFFF;
+  -webkit-animation-name: run-text;
+          animation-name: run-text;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.togo .beverages__descr {
+  margin: 0;
+}
+.togo .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0 75px 0;
+}
+@media (max-width: 1180px) {
+  .togo .wrapper {
+    width: 82%;
+  }
+}
+.togo .pd2 {
+  margin-top: 32px;
+}
+
+.footer {
+  background-color: #000000;
+}
+.footer .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 43px 0 60px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 1180px) {
+  .footer .wrapper {
+    width: 82%;
+  }
+}
+.footer__form {
+  font-family: "Exo2";
+  font-size: 16px;
+  font-weight: 300;
+  color: #979797;
+}
+.footer__form_logo {
+  margin-bottom: 20px;
+}
+.footer__form .label {
+  margin-bottom: 9px;
+}
+.footer__form .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__form input {
+  width: 300px;
+  height: 58px;
+  border: 1px solid #E4200E;
+  background: none;
+  border-radius: 5px;
+  color: #979797;
+}
+.footer__form button {
+  width: 64px;
+  height: 58px;
+  border: 1px solid #E4200E;
+  background-color: #E4200E;
+  border-radius: 5px;
+  margin-left: 16px;
+}
+.footer__form_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__info_caps {
+  font-family: "Geometria";
+  font-size: 16px;
+  font-weight: 700;
+}
+.footer__info_grey {
+  font-family: "Exo2";
+  font-size: 16px;
+  font-weight: 300;
+  color: #979797;
+}
+.footer__links_download {
+  margin-top: 26px;
+}
+.footer__links_download .download {
+  width: 100%;
+}
+.footer__links_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
