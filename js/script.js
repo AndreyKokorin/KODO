@@ -26,7 +26,7 @@ nav.forEach((item, i) => {
 
 // animate sushi
 
-/* const sushiImg = document.querySelector(".sushi__img");
+const sushiImg = document.querySelector(".sushi__img");
 
 window.addEventListener("scroll", () => {
     console.log(window.pageYOffset)
@@ -37,5 +37,5 @@ window.addEventListener("scroll", () => {
         sushiImg.classList.remove("animImg");
     }
 
-}); */
+});
 

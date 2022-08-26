@@ -240,11 +240,13 @@ span {
     width: 100%;
   }
 }
-.sushi .animImg {
-  -webkit-transform: rotate(0.5turn) translateX(-28%);
-          transform: rotate(0.5turn) translateX(-28%);
-  -webkit-transition: all 5s;
-  transition: all 5s;
+@media (min-width: 1000px) {
+  .sushi .animImg {
+    -webkit-transform: rotate(0.5turn) translateX(-28%);
+            transform: rotate(0.5turn) translateX(-28%);
+    -webkit-transition: all 5s;
+    transition: all 5s;
+  }
 }
 
 .about {
@@ -468,8 +470,13 @@ span {
 .aboutKitchen span {
   color: #E4200E;
 }
+.aboutKitchen__textWrap {
+  display: inline-block;
+  padding: 18px;
+  border-left: 5px solid #E4200E;
+}
 .aboutKitchen .wrapper {
-  width: 81%;
+  width: 82%;
   margin: 0 auto;
   padding: 89px 0;
 }
@@ -483,6 +490,7 @@ span {
   font-family: Geometria;
   font-size: 40px;
   font-weight: 700;
+  line-height: 38px;
 }
 .aboutKitchen__main {
   margin-top: 91px;
@@ -490,24 +498,45 @@ span {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 768px) {
+  .aboutKitchen__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .aboutKitchen__main_descr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 19px;
 }
 .aboutKitchen__main_descr .aboutKitchen__main_text {
   margin-top: 18px;
 }
+@media (max-width: 768px) {
+  .aboutKitchen__main_descr {
+    margin-bottom: 30px;
+    line-height: 17px;
+  }
+}
 .aboutKitchen__main_line {
-  height: 141px;
+  height: 100%;
   width: 5px;
   background-color: #E4200E;
   margin-right: 18px;
+}
+@media (max-width: 768px) {
+  .aboutKitchen__main_line {
+    height: 210px;
+  }
 }
 .aboutKitchen__main_descr2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 19px;
 }
 .aboutKitchen__main_descr2 .cikle {
   width: 14px;
@@ -569,6 +598,7 @@ span {
 
 .beverages {
   background-color: #000000;
+  width: 100%;
 }
 .beverages .wrapper {
   width: 1180px;
@@ -583,8 +613,42 @@ span {
     width: 82%;
   }
 }
+@media (max-width: 728px) {
+  .beverages .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.beverages__img img {
+  width: 100%;
+  min-width: 260px;
+  max-width: 424px;
+  height: auto;
+  max-height: 614px;
+  min-height: 377px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 728px) {
+  .beverages__img {
+    max-width: 260px;
+    max-height: 377px;
+  }
+}
 .beverages__descr {
   margin: 230px 0 0 70px;
+  width: 60%;
+}
+@media (max-width: 728px) {
+  .beverages__descr {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
 }
 .beverages__title {
   font-family: Geometria;
