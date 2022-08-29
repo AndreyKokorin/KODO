@@ -52,6 +52,28 @@ span{
         background-size: cover;
        }
     }
+    .active{
+        @media (max-width: 768px) {
+                display: block;
+                position: absolute;
+                width: 40%; 
+                right: 0;
+                top: 0;
+                height: 100vh;
+                background-color: $black; 
+                display: flex;
+                align-items: center;
+                z-index: 10;
+        }
+
+        li{
+            display: block;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+
+    }
     &_menu{
         display: flex;
         justify-content: center;
@@ -82,10 +104,12 @@ span{
             padding-left: 30px;
         }
         }
-        
     } 
     &__burger{
         display: none;
+        cursor: pointer;
+        z-index: 20;
+        right: 0;
         @media screen and (max-width: 768px) {
             display: block;
         }
@@ -98,6 +122,19 @@ span{
             margin: 8px 0;
         }
     }  
+    &__burger_active{
+        .line1{
+            /* transform: translateY(-8px) rotate(90deg); */
+            transform: translateY(4px) rotate(45deg);
+        }
+        .line3{
+            transform: rotate(-45deg);
+        }
+        .line2{
+            opacity: 0;
+            margin: 0;
+        }
+    }
 }
 
 .discount{
@@ -265,6 +302,7 @@ span{
     .wrapper{
         width: 1180px;
         margin: 0 auto;
+        height: 100%;
         position: relative;
         height: 100%;
         @media (max-width: 1180px) {
@@ -294,7 +332,7 @@ span{
     &__text{
         position: absolute;
         width: 700%;
-        top: 250px;
+        top: 25%;
         left: 0;
         text-align-last: left;
         @include font("Intro", 400, 350px);
@@ -304,6 +342,14 @@ span{
         animation-duration: 30s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
+        white-space: nowrap;
+        @media (max-width: 768px) {
+            font-size: 150px;
+            top: 30%;
+        }
+        @media (max-width: 576px) {
+            top: 20%;
+        }
     } 
 }
 
@@ -386,7 +432,9 @@ span{
     span{
         color: $red;
     }
-
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
     .wrapper{
         flex-direction: column;
         align-items: center;
@@ -411,7 +459,7 @@ span{
             }
         }
     }
-
+    
 }
 .beverages{
     background-color: $black;
@@ -459,6 +507,9 @@ span{
     }
     &__title{
         @include font(Geometria, 700, 40px);
+        @media (max-width: 728px){
+            font-size: 30px;
+        }
     }
 
     &__list{
@@ -491,6 +542,9 @@ span{
     background-image: url(../img/Kodo_T_Cars_nov_007.png); 
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 768px) {
+        height: 267px;
+    }
     .wrapper{
         width: 1180px;
         margin: 0 auto;
@@ -508,7 +562,10 @@ span{
         text-align: right;
         width: 100%;
         position: absolute;
-        z-index:  10;    
+        z-index:  10; 
+        @media (max-width: 768px) {
+            display: none;
+        }   
     }
     &__text{
         position: absolute;
@@ -523,6 +580,13 @@ span{
         animation-duration: 30s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
+        @media (max-width: 768px) {
+            font-size: 150px;
+            position: static;
+            display: flex;
+            align-items: center;
+            height: 267px;
+        }
     } 
 }
 
@@ -543,6 +607,21 @@ span{
     .pd2{
         margin-top: 32px;
     }
+    @media (max-width:768px) {
+        .beverages__img{
+            display: none;
+        }
+
+        ul{
+            padding: 0;
+        }
+        .beverages__list{
+            font-size: 14px;
+        }
+        .beverages__title{
+            font-size: 30px;
+        }
+    }
 }
 
 .footer{
@@ -550,12 +629,21 @@ span{
     .wrapper{
         width: 1180px;
         margin: 0 auto;
-        display: flex;
+        /* display: flex; */
         padding: 43px 0 60px 0;
-        align-items: center;
-        justify-content: space-between;
+        /* align-items: center;
+        justify-content: space-between; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         @media (max-width: 1180px) {
             width: 82%;
+        }
+        @media (max-width: 1000px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 30px;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
         }
     }
     &__form{
@@ -581,6 +669,9 @@ span{
             background: none;
             border-radius: 5px;
             color: $grey;
+            @media (max-width: 430px) {
+                width: 200px;
+            }
         }
 
         button{
@@ -590,6 +681,9 @@ span{
             background-color: $red;
             border-radius: 5px;
             margin-left: 16px;
+            @media (max-width: 430px) {
+                width: 50px;
+            }
         }
         &_input{
             display: flex;
@@ -597,7 +691,8 @@ span{
     }
     &__info{
         &_caps{
-            @include font("Geometria", 700, 16px);              
+            @include font("Geometria", 700, 16px); 
+
         }
         &_grey{
             @include font("Exo2", 300, 16px);
@@ -605,17 +700,39 @@ span{
         }
     }
     &__links{
+        max-width: 110px;
         &_download{
             margin-top: 26px;
             .download{
-                width: 100%;
+                /* width: 100%; */
+                width: 110px;
+                height: 36px;
             }
         }
         &_social{
            display: flex;
            justify-content: space-between;
         }
-        
+        @media (max-width: 1000px) {
+            justify-self: end;
+        }
+        @media (max-width: 768px) {
+            justify-self: start;
+        }
     }
-}
+    &__info1{
+        @media (max-width: 1000px) {
+            justify-self: end;
+        }
+        @media (max-width: 768px) {
+            justify-self: start;
+        }
+    }
 
+    &__info2{
+        @media (max-width: 768px) {
+            justify-self: start;
+        }
+    }
+
+}

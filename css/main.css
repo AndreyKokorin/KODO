@@ -115,6 +115,29 @@ span {
   background: url(../img/start_logo_02\ 2.png);
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .header .active {
+    display: block;
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 10;
+  }
+}
+.header .active li {
+  display: block;
+  padding: 30px 0;
+  text-align: center;
+}
 .header_menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,6 +176,9 @@ span {
 }
 .header__burger {
   display: none;
+  cursor: pointer;
+  z-index: 20;
+  right: 0;
 }
 @media screen and (max-width: 768px) {
   .header__burger {
@@ -166,6 +192,19 @@ span {
 }
 .header__burger .line2 {
   margin: 8px 0;
+}
+.header__burger_active .line1 {
+  /* transform: translateY(-8px) rotate(90deg); */
+  -webkit-transform: translateY(4px) rotate(45deg);
+          transform: translateY(4px) rotate(45deg);
+}
+.header__burger_active .line3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.header__burger_active .line2 {
+  opacity: 0;
+  margin: 0;
 }
 
 .discount {
@@ -401,6 +440,7 @@ span {
 .toshishito .wrapper {
   width: 1180px;
   margin: 0 auto;
+  height: 100%;
   position: relative;
   height: 100%;
   display: -webkit-box;
@@ -440,7 +480,7 @@ span {
 .toshishito__text {
   position: absolute;
   width: 700%;
-  top: 250px;
+  top: 25%;
   left: 0;
   -moz-text-align-last: left;
        text-align-last: left;
@@ -457,6 +497,18 @@ span {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .toshishito__text {
+    font-size: 150px;
+    top: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .toshishito__text {
+    top: 20%;
+  }
 }
 
 .aboutKitchen {
@@ -560,6 +612,11 @@ span {
 .downloadApp span {
   color: #E4200E;
 }
+@media (max-width: 768px) {
+  .downloadApp {
+    font-size: 30px;
+  }
+}
 .downloadApp .wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -655,6 +712,11 @@ span {
   font-size: 40px;
   font-weight: 700;
 }
+@media (max-width: 728px) {
+  .beverages__title {
+    font-size: 30px;
+  }
+}
 .beverages__list {
   margin-top: 44px;
   font-family: Geometria;
@@ -689,6 +751,11 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .delivery {
+    height: 267px;
+  }
+}
 .delivery .wrapper {
   width: 1180px;
   margin: 0 auto;
@@ -710,6 +777,11 @@ span {
   position: absolute;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .delivery__img {
+    display: none;
+  }
+}
 .delivery__text {
   position: absolute;
   width: 700%;
@@ -730,6 +802,19 @@ span {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+@media (max-width: 768px) {
+  .delivery__text {
+    font-size: 150px;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 267px;
+  }
 }
 
 .togo .beverages__descr {
@@ -754,6 +839,20 @@ span {
 .togo .pd2 {
   margin-top: 32px;
 }
+@media (max-width: 768px) {
+  .togo .beverages__img {
+    display: none;
+  }
+  .togo ul {
+    padding: 0;
+  }
+  .togo .beverages__list {
+    font-size: 14px;
+  }
+  .togo .beverages__title {
+    font-size: 30px;
+  }
+}
 
 .footer {
   background-color: #000000;
@@ -761,20 +860,31 @@ span {
 .footer .wrapper {
   width: 1180px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /* display: flex; */
   padding: 43px 0 60px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /* align-items: center;
+  justify-content: space-between; */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
 }
 @media (max-width: 1180px) {
   .footer .wrapper {
     width: 82%;
+  }
+}
+@media (max-width: 1000px) {
+  .footer .wrapper {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .footer .wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 .footer__form {
@@ -806,6 +916,11 @@ span {
   border-radius: 5px;
   color: #979797;
 }
+@media (max-width: 430px) {
+  .footer__form input {
+    width: 200px;
+  }
+}
 .footer__form button {
   width: 64px;
   height: 58px;
@@ -813,6 +928,11 @@ span {
   background-color: #E4200E;
   border-radius: 5px;
   margin-left: 16px;
+}
+@media (max-width: 430px) {
+  .footer__form button {
+    width: 50px;
+  }
 }
 .footer__form_input {
   display: -webkit-box;
@@ -830,11 +950,16 @@ span {
   font-weight: 300;
   color: #979797;
 }
+.footer__links {
+  max-width: 110px;
+}
 .footer__links_download {
   margin-top: 26px;
 }
 .footer__links_download .download {
-  width: 100%;
+  /* width: 100%; */
+  width: 110px;
+  height: 36px;
 }
 .footer__links_social {
   display: -webkit-box;
@@ -843,4 +968,34 @@ span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .footer__links {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+@media (max-width: 768px) {
+  .footer__links {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+@media (max-width: 1000px) {
+  .footer__info1 {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+@media (max-width: 768px) {
+  .footer__info1 {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+@media (max-width: 768px) {
+  .footer__info2 {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
 }

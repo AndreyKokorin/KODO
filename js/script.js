@@ -29,7 +29,7 @@ nav.forEach((item, i) => {
 const sushiImg = document.querySelector(".sushi__img");
 
 window.addEventListener("scroll", () => {
-    console.log(window.pageYOffset)
+
     if(window.pageYOffset >= 335){
         sushiImg.classList.add("animImg");
     }
@@ -38,4 +38,22 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+// menu-burger
+
+const burgerBtn = document.querySelector(".header__burger"); 
+const menu = document.querySelector(".header_menu");
+
+burgerBtn.addEventListener("click", (e) => {
+    menu.classList.toggle("active");
+    burgerBtn.classList.toggle("header__burger_active");
+
+})
+
+menu.addEventListener("click", (e) => {
+        if(e.target.tagName = "LI"){
+            menu.classList.remove("active");
+            burgerBtn.classList.remove("header__burger_active");
+        }
+})
 
