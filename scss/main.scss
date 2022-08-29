@@ -331,6 +331,7 @@ span{
     }
     &__text{
         position: absolute;
+
         width: 700%;
         top: 25%;
         left: 0;
@@ -344,8 +345,7 @@ span{
         animation-iteration-count: infinite;
         white-space: nowrap;
         @media (max-width: 768px) {
-            font-size: 150px;
-            top: 30%;
+            display: none;
         }
         @media (max-width: 576px) {
             top: 20%;
@@ -581,11 +581,7 @@ span{
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         @media (max-width: 768px) {
-            font-size: 150px;
-            position: static;
-            display: flex;
-            align-items: center;
-            height: 267px;
+            display: none;
         }
     } 
 }

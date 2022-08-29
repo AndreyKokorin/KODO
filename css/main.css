@@ -501,8 +501,7 @@ span {
 }
 @media (max-width: 768px) {
   .toshishito__text {
-    font-size: 150px;
-    top: 30%;
+    display: none;
   }
 }
 @media (max-width: 576px) {
@@ -805,15 +804,7 @@ span {
 }
 @media (max-width: 768px) {
   .delivery__text {
-    font-size: 150px;
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 267px;
+    display: none;
   }
 }
 

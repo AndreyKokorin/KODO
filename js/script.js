@@ -1,6 +1,6 @@
 // Running text
 const nav = document.querySelectorAll(".nav");
-const main = document.querySelector(".discount");
+const main = document.querySelector(".carped");
 const about = document.querySelector(".about");
 const kitchen = document.querySelector(".aboutKitchen");
 const beverages = document.querySelector(".beverages");
